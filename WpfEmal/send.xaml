@@ -1,0 +1,56 @@
+﻿<Page x:Class="WpfEmal.send"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfEmal"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="send">
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\percy\OneDrive\Рабочий стол\WpfEmal\WpfEmal\tilt.png"/>
+    </Page.Background>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="248*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Кому : " VerticalAlignment="Center" Height="41" Width="91" Margin="42,0,0,0"/>
+        <TextBox x:Name="komy"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="31" Width="486" Grid.Column="1" Margin="48,2,133,0" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Тема :  " VerticalAlignment="Center" Height="41" Width="91" Margin="42,0,0,0" Grid.Row="1"/>
+        <TextBox x:Name="Topic"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="36" Width="486" Margin="48,0,133,0" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Content="Отправить" Grid.Row="5" VerticalAlignment="Center" Height="40" Click="Button_Click" Grid.ColumnSpan="2" Margin="5,0,10,0" Grid.Column="1"/>
+        <RichTextBox Name="richtext" Grid.Row="3" Grid.ColumnSpan="3" Margin="133,0,0,0">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ComboBox Name="MailClick"  Margin="10,0,10,5" Grid.Column="2">
+            <ComboBoxItem Content="Google" Tag="imap.gmail.com"/>
+            <ComboBoxItem Content="Mail" Tag="imap.mail.ru"/>
+            <ComboBoxItem Content="Yandex" Tag="imap.yandex.ru"/>
+            <ComboBoxItem Content="Rambler" Tag="imap.rambler.ru"/>
+        </ComboBox>
+        <Button Content="" Grid.Row="5" VerticalAlignment="Center" Height="40" Click="Button_Click_1" Margin="10,0,10,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/left.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Page>

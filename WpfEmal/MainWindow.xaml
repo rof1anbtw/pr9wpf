@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfEmal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfEmal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Вход"  Margin="106,62,106,10" Grid.Column="1" />
+        <TextBox Name="Email"  Margin="76,25,133,39"  Text="" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <ComboBox Name="MailClick"  Margin="139,25,64,39" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Google" Tag="imap.gmail.com"/>
+            <ComboBoxItem Content="Mail" Tag="imap.mail.ru"/>
+        </ComboBox>
+        <PasswordBox Name="Parol" Margin="0,4,0,55" Grid.Row="2" Grid.Column="1" />
+        <Button Content="Войти"  Width="660" Grid.Row="3" Grid.ColumnSpan="3" Margin="76,30,64,30" Click="Button_Click"/>
+        <Label Content="Пароль" Margin="133,4,64,55" Grid.Row="2" />
+        
+
+        
+
+    </Grid>
+    
+</Window>

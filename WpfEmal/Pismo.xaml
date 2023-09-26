@@ -1,0 +1,44 @@
+﻿<Page x:Class="WpfEmal.Pismo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfEmal"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Pismo">
+    <Page.Background>
+        <ImageBrush ImageSource="C:\Users\percy\OneDrive\Рабочий стол\WpfEmal\WpfEmal\tilt.png"/>
+    </Page.Background>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="248*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition />
+            <ColumnDefinition Width="4*"/>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Кому : " VerticalAlignment="Center" Height="41" Width="115" Margin="42,0,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="От кого : " VerticalAlignment="Center" Height="41" Width="115" Margin="42,0,0,0"/>
+        <TextBlock x:Name="komy" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Вам" VerticalAlignment="Center" Height="41" Width="456" Grid.Column="1"/>
+        <TextBlock x:Name="otkogo" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="41" Width="456" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Name="soobshinee" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="266" Width="800" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Тема :  " VerticalAlignment="Center" Height="41" Width="115" Margin="42,0,0,0" Grid.Row="2"/>
+        <TextBlock x:Name="Topic" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="41" Width="456" Grid.Column="1" Grid.Row="2"/>
+        <Button Content="Назад" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="40" Width="160" Click="Button_Click_2"/>
+        <Button Grid.Column="1" Content="Отправиться" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="40" Width="640" Click="Button_Click"/>
+        <Frame Name="folderpage" Grid.ColumnSpan="2" Grid.RowSpan="6" />
+
+
+
+    </Grid>
+</Page>
